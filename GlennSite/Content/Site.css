@@ -1,0 +1,43 @@
+﻿/* layout */
+body 
+{
+    padding-top:70px;
+}
+
+.container 
+{
+	width:90%;
+}
+
+/* Jumbotron */
+.jumbotron
+{
+    text-align:left;
+}
+
+/* carousel */
+.carousel-indicators
+{
+    bottom: 0;
+}
+
+.carousel-indicators .active
+{
+    background-color: #222;
+}
+
+.carousel-indicators li
+{
+    border-color: #222;
+}
+
+/* hyper links*/
+a:link, a:visited, a:hover
+{
+    text-decoration:none;
+}
+
+a:link:active, a:visited:active, a:hover:active
+{
+    text-decoration:none;
+}

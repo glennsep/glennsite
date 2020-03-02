@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="1f034295c696459886bdd715cec54150" Name="Diagram1">
+        <EntityTypeShape EntityType="CaseFactSheetModel.CFS_Alibi" Width="1.5" PointX="3" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CaseFactSheetModel.CFS_MurderFacts" Width="1.5" PointX="0.75" PointY="8.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CaseFactSheetModel.CFS_WhoDidIt" Width="1.5" PointX="3" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CaseFactSheetModel.CFS_WhoWasWhere" Width="1.5" PointX="3" PointY="10" IsExpanded="true" />
+        <AssociationConnector Association="CaseFactSheetModel.FK_CFS_Alibi_CFS_MurderFacts" ManuallyRouted="false" />
+        <AssociationConnector Association="CaseFactSheetModel.FK_CFS_WhoDidIt_CFS_MurderFacts" ManuallyRouted="false" />
+        <AssociationConnector Association="CaseFactSheetModel.FK_CFS_WhoWasWhere_CFS_MurderFacts" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

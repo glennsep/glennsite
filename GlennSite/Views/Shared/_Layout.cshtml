@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/bootstrap.min.css")
+    @Styles.Render("~/Content/bootstrap-theme-min.css")
+    @Styles.Render("~/Content/Site.css")
+</head>
+<body>
+    <!-- menu bar-->
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Site Brand -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-navbar-collaspe" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <div>@Html.ActionLink("Glenn's Site", "Index", "Home", null, new { @class = "navbar-brand text-muted" })</div>
+            </div>
+
+            <!-- navbar links -->
+            <div class="collapse navbar-collapse" id="bs-navbar-collaspe">
+                <ul class="nav navbar-nav navbar-right">
+                    <!-- Electronic Detecitve Link-->
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Electronic Detective<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li>@Html.ActionLink("Play the Game", "ElectronicDetective", "ElectronicDetective")</li>
+                            <li>@Html.ActionLink("How to Play", "HowToPlay", "ElectronicDetective")</li>
+                            <li>@Html.ActionLink("View Murder Data", "ViewMurderData", "ElectronicDetective")</li>
+                        </ul>
+                    </li>
+
+                    <!-- Today's Joke-->
+                    <li>@Html.ActionLink("Today's Joke", "TodaysJoke", "TodaysJoke")</li>
+                </ul>
+            </div> <!-- .navbar-collaspe -->
+        
+        </div> <!-- .container fluid-->
+    </div>
+
+
+    <!-- place space between menu and body -->
+    <div class="row">
+        <div class="col-lg-12" style="height:80px"></div>
+    </div>
+
+    <!-- body and page footer-->
+    <div class="container">
+
+        <div class="jumbotron">
+            @RenderBody()
+        </div>
+
+        <div class="modal-footer">
+            &copy; @DateTime.Now.Year - Glenn Seplowitz - @DateTime.Now.ToLongDateString()
+        </div>
+    </div>
+    @Scripts.Render("~/Scripts/jquery-1.9.1.min.js")
+    @Scripts.Render("~/Scripts/bootstrap.min.js")
+
+</body>
+</html>

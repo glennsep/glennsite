@@ -1,0 +1,212 @@
+﻿
+@{
+    ViewBag.Title = "Today's Joke";
+}
+<!DOCTYPE html>
+
+<!-- main div tag -->
+<div>
+    <!-- display today's joke logo -->
+    <div class="row">
+        <div class="col-lg-5"></div>
+        <div class="col-lg-2 text-center">
+            <img src="~/Images/TodaysJokes/MainApp.png" style="vertical-align: middle; width:200px; height:200px" />
+        </div>
+        <div class="col-lg-5"></div>
+    </div>
+
+    <!-- Display welcome message -->
+    <div class="row">
+        <div class="col-lg-5"></div>
+        <div class="col-lg-2 text-center">
+            <br /><br />
+            <p class="lead">Welcome to Today's Joke</p>
+            <ul class="list-group">
+                <li class="list-group-item list-group-item-warning">New Joke Each Day</li>
+                <li class="list-group-item list-group-item-warning">Jokes Listed by Category</li>
+                <li class="list-group-item list-group-item-warning">Save "Favorite" jokes</li>
+                <li class="list-group-item list-group-item-warning">Search for jokes</li>
+                <li class="list-group-item list-group-item-warning">Submit a Joke</li>
+                <li class="list-group-item list-group-item-warning">Free, No Ads</li>
+            </ul>
+        </div>
+        <div class="col-lg-5>"></div>
+    </div>
+
+    <!-- blank row-->
+    <div class="row">
+        <div class="col-lg-12">
+            <br />
+        </div>
+    </div>
+
+    <!-- download the app and contact us -->
+    <div class="row">
+        <div class="col-lg-4"></div>
+        <div class="col-lg-4 text-center">
+            <a target="_blank" href="https://itunes.apple.com/us/app/todays-joke/id1077606487?ls=1&mt=8"><img src="~/Images/TodaysJokes/AppStore.png" /></a><br /><br />
+            <a href="mailto:todaysjoke@optonline.net" class="text-muted"><p class="lead">Contact Us</p></a>
+        </div>
+        <div class="col-lg-4"></div>
+    </div>
+
+    <!-- blank row-->
+    <div class="row">
+        <div class="col-lg-12">
+            <br />
+        </div>
+    </div>
+
+    <!-- features of main screen -->
+    <div class="row">
+        <div class="col-lg-6">
+            <p class="lead">Main Screen</p>
+            <ul>
+                <li>Use Mail Icon in Upper Right to Submit a New Joke</li>
+                <li>Use Menu Icon in Upper Left to Reveal App Choices or Swipe the Screen from Left to Right</li>
+                <li>Displays the Date for the Joke of the Day</li>
+                <li>Displays the Category</li>
+                <li>Displays Who Submitted Joke</li>
+                <li>Displays the Joke</li>
+            </ul>
+        </div>
+        <div class="col-lg-6 text-center">
+            <img src="~/Images/TodaysJokes/TodaysJoke-MainScreen.jpg" style="vertical-align: middle; width:375px; height:667px" />
+        </div>
+    </div>
+
+    <!-- blank row-->
+    <div class="row">
+        <div class="col-lg-12">
+            <br />
+        </div>
+    </div>
+
+    <!-- Submit a new Joke -->
+    <div class="row">
+        <div class="col-lg-6">
+            <p class="lead">Submit a Joke</p>
+            <ul>
+                <li>Click on Question Icon for Help</li>
+                <li>Select a Joke Category</li>
+                <li>Enter your Name if you want Recognition</li>
+                <li>Click on the "Notify Me" checkbox to find out when your joke will be displayed</li>
+                <li>Enter the Joke</li>
+                <li>Click the "Submit" button on the upper right to e-mail the joke</li>
+            </ul>
+        </div>
+        <div class="col-lg-6 text-center">
+            <img src="~/Images/TodaysJokes/TodaysJoke-Submit.jpg" style="vertical-align: middle; width:375px; height:667px" />
+        </div>
+    </div>
+
+    <!-- blank row-->
+    <div class="row">
+        <div class="col-lg-12">
+            <br />
+        </div>
+    </div>
+
+    <!-- Application Choices -->
+    <div class="row">
+        <div class="col-lg-6">
+            <p class="lead">Application Choice</p>
+            <ul>
+                <li>Select Categories to view Jokes by Category or to see your Favorite Jokes</li>
+                <li>Select Search to find jokes by keyword</li>
+                <li>Select Contact Us to send us any feedback or general messages</li>
+            </ul>
+        </div>
+        <div class="col-lg-6 text-center">
+            <img src="~/Images/TodaysJokes/TodaysJoke-Navigation.jpg" style="vertical-align: middle; width:375px; height:667px" />
+        </div>
+    </div>
+
+    <!-- blank row-->
+    <div class="row">
+        <div class="col-lg-12">
+            <br />
+        </div>
+    </div>
+
+    <!-- Categories -->
+    <div class="row">
+        <div class="col-lg-6">
+            <p class="lead">Categories</p>
+            <ul>
+                <li>Select Jokes by Category</li>
+                <li>Choose Favporite to see your most popular jokes</li>
+                <li>Choose Random to see all Jokes in a Random order</li>
+            </ul>
+        </div>
+        <div class="col-lg-6 text-center">
+            <img src="~/Images/TodaysJokes/TodaysJoke-Categories.jpg" style="vertical-align: middle; width:375px; height:667px" />
+        </div>
+    </div>
+
+    <!-- blank row-->
+    <div class="row">
+        <div class="col-lg-12">
+            <br />
+        </div>
+    </div>
+
+    <!-- List Jokes -->
+    <div class="row">
+        <div class="col-lg-6">
+            <p class="lead">List of Jokes</p>
+            <ul>
+                <li>See a list of all jokes by Category, Favorites, Random, or by Search Results</li>
+                <li>Jokes sorted by date created, except for Random jokes that are displayed in any order</li>
+                <li>Select a Category to see the jokes</li>
+            </ul>
+        </div>
+        <div class="col-lg-6 text-center">
+            <img src="~/Images/TodaysJokes/TodaysJoke-ListJokes.jpg" style="vertical-align: middle; width:375px; height:667px" />
+        </div>
+    </div>
+
+    <!-- blank row-->
+    <div class="row">
+        <div class="col-lg-12">
+            <br />
+        </div>
+    </div>
+
+    <!-- Display Jokes -->
+    <div class="row">
+        <div class="col-lg-6">
+            <p class="lead">Display Jokes</p>
+            <ul>
+                <li>Shows the joke for a given Category, Favorite, Random, or Search Result</li>
+                <li>Can swipe left or right for another joke</li>
+                <li>Mark a joke as "Favorite" by pressing the "heart" in the upper right corner</li>
+            </ul>
+        </div>
+        <div class="col-lg-6 text-center">
+            <img src="~/Images/TodaysJokes/TodaysJoke-DisplayJokes.jpg" style="vertical-align: middle; width:375px; height:667px" />
+        </div>
+    </div>
+
+    <!-- blank row-->
+    <div class="row">
+        <div class="col-lg-12">
+            <br />
+        </div>
+    </div>
+
+    <!-- Contact Us -->
+    <div class="row">
+        <div class="col-lg-6">
+            <p class="lead">Contact Us</p>
+            <ul>
+                <li>Enter a Subject</li>
+                <li>Enter the Message</li>
+                <li>Click on "Submit" on the upper right corner to email the joke</li>
+            </ul>
+        </div>
+        <div class="col-lg-6 text-center">
+            <img src="~/Images/TodaysJokes/TodaysJoke-Contact.jpg" style="vertical-align: middle; width:375px; height:667px" />
+        </div>
+    </div>
+</div>

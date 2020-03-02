@@ -1,0 +1,472 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="CaseFactSheetModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="CFS_Alibi">
+          <Key>
+            <PropertyRef Name="GameId" />
+          </Key>
+          <Property Name="GameId" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="LennyLittle" Type="varchar" MaxLength="200" />
+          <Property Name="AlFarook" Type="varchar" MaxLength="200" />
+          <Property Name="PepePerez" Type="varchar" MaxLength="200" />
+          <Property Name="TonyRacheti" Type="varchar" MaxLength="200" />
+          <Property Name="MickeyOMalley" Type="varchar" MaxLength="200" />
+          <Property Name="MaxFineflugle" Type="varchar" MaxLength="200" />
+          <Property Name="RippRapp" Type="varchar" MaxLength="200" />
+          <Property Name="BusterBailey" Type="varchar" MaxLength="200" />
+          <Property Name="RockyRoll" Type="varchar" MaxLength="200" />
+          <Property Name="LingTong" Type="varchar" MaxLength="200" />
+          <Property Name="IvyLittle" Type="varchar" MaxLength="200" />
+          <Property Name="LucyTumble" Type="varchar" MaxLength="200" />
+          <Property Name="PiperPerez" Type="varchar" MaxLength="200" />
+          <Property Name="DinaRacheti" Type="varchar" MaxLength="200" />
+          <Property Name="EileenStellar" Type="varchar" MaxLength="200" />
+          <Property Name="JoanFineflugle" Type="varchar" MaxLength="200" />
+          <Property Name="RosePettle" Type="varchar" MaxLength="200" />
+          <Property Name="DorisDill" Type="varchar" MaxLength="200" />
+          <Property Name="CandyRoll" Type="varchar" MaxLength="200" />
+          <Property Name="SingWong" Type="varchar" MaxLength="200" />
+        </EntityType>
+        <EntityType Name="CFS_MurderFacts">
+          <Key>
+            <PropertyRef Name="GameId" />
+          </Key>
+          <Property Name="GameId" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="VictimId" Type="int" />
+          <Property Name="VictimFName" Type="varchar" MaxLength="50" />
+          <Property Name="VictimLName" Type="varchar" MaxLength="50" />
+          <Property Name="VictimPlace" Type="char" MaxLength="1" />
+          <Property Name="MurdererSex" Type="char" MaxLength="1" />
+          <Property Name="MurdererLocationId" Type="int" />
+          <Property Name="MurdererAreaId" Type="int" />
+          <Property Name="MurdererWeapon38" Type="int" />
+          <Property Name="MurdererWeapon45" Type="int" />
+          <Property Name="MurdererFingerPrints38Odd" Type="int" />
+          <Property Name="MurdererFingerPrints38Even" Type="int" />
+          <Property Name="MurdererFingerPrints45Odd" Type="int" />
+          <Property Name="MurdererFingerPrints45Even" Type="int" />
+        </EntityType>
+        <EntityType Name="CFS_WhoDidIt">
+          <Key>
+            <PropertyRef Name="GameId" />
+          </Key>
+          <Property Name="GameId" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="WhoDidIt" Type="int" />
+        </EntityType>
+        <EntityType Name="CFS_WhoWasWhere">
+          <Key>
+            <PropertyRef Name="GameId" />
+          </Key>
+          <Property Name="GameId" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="ArtShowMaleIdOdd" Type="int" />
+          <Property Name="ArtShowMaleIdEven" Type="int" />
+          <Property Name="ArtShowFemaleIdOdd" Type="int" />
+          <Property Name="ArtShowFemaleIdEven" Type="int" />
+          <Property Name="BoxAtTheaterMaleIdOdd" Type="int" />
+          <Property Name="BoxAtTheaterMaleIdEven" Type="int" />
+          <Property Name="BoxAtTheaterFemaleIdOdd" Type="int" />
+          <Property Name="BoxAtTheaterFemaleIdEven" Type="int" />
+          <Property Name="CardPartyMaleIdOdd" Type="int" />
+          <Property Name="CardPartyMaleIdEven" Type="int" />
+          <Property Name="CardPartyFemaleIdOdd" Type="int" />
+          <Property Name="CardPartyFemaleIdEven" Type="int" />
+          <Property Name="DocksMaleIdOdd" Type="int" />
+          <Property Name="DocksMaleIdEven" Type="int" />
+          <Property Name="DocksFemaleIdOdd" Type="int" />
+          <Property Name="DocksFemaleIdEven" Type="int" />
+          <Property Name="EmbassyMaleIdOdd" Type="int" />
+          <Property Name="EmbassyMaleIdEven" Type="int" />
+          <Property Name="EmbassyFemaleIdOdd" Type="int" />
+          <Property Name="EmbassyFemaleIdEven" Type="int" />
+          <Property Name="FactoryMaleIdOdd" Type="int" />
+          <Property Name="FactoryMaleIdEven" Type="int" />
+          <Property Name="FactoryFemaleIdOdd" Type="int" />
+          <Property Name="FactoryFemaleIdEven" Type="int" />
+          <Property Name="ArtShowLocationId" Type="int" />
+          <Property Name="ArtShowAreaId" Type="int" />
+          <Property Name="BoxAtTheaterLocationId" Type="int" />
+          <Property Name="BoxAtTheaterAreaId" Type="int" />
+          <Property Name="CardPartyLocationId" Type="int" />
+          <Property Name="CardPartyAreaId" Type="int" />
+          <Property Name="DocksLocationId" Type="int" />
+          <Property Name="DocksAreaId" Type="int" />
+          <Property Name="EmbassyLocationId" Type="int" />
+          <Property Name="EmbassyAreaId" Type="int" />
+          <Property Name="FactoryLocationId" Type="int" />
+          <Property Name="FactoryAreaId" Type="int" />
+          <Property Name="ArtShowWeaponUsedId" Type="int" />
+          <Property Name="BoxAtTheaterWeaponUsedId" Type="int" />
+          <Property Name="CardPartyWeaponUsedId" Type="int" />
+          <Property Name="DocksWeaponUsedId" Type="int" />
+          <Property Name="EmbassyWeaponUsedId" Type="int" />
+          <Property Name="FactoryWeaponUsedId" Type="int" />
+        </EntityType>
+        <Association Name="FK_CFS_Alibi_CFS_MurderFacts">
+          <End Role="CFS_MurderFacts" Type="Self.CFS_MurderFacts" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="CFS_Alibi" Type="Self.CFS_Alibi" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="CFS_MurderFacts">
+              <PropertyRef Name="GameId" />
+            </Principal>
+            <Dependent Role="CFS_Alibi">
+              <PropertyRef Name="GameId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CFS_WhoDidIt_CFS_MurderFacts">
+          <End Role="CFS_MurderFacts" Type="Self.CFS_MurderFacts" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="CFS_WhoDidIt" Type="Self.CFS_WhoDidIt" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="CFS_MurderFacts">
+              <PropertyRef Name="GameId" />
+            </Principal>
+            <Dependent Role="CFS_WhoDidIt">
+              <PropertyRef Name="GameId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CFS_WhoWasWhere_CFS_MurderFacts">
+          <End Role="CFS_MurderFacts" Type="Self.CFS_MurderFacts" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="CFS_WhoWasWhere" Type="Self.CFS_WhoWasWhere" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="CFS_MurderFacts">
+              <PropertyRef Name="GameId" />
+            </Principal>
+            <Dependent Role="CFS_WhoWasWhere">
+              <PropertyRef Name="GameId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="CaseFactSheetModelStoreContainer">
+          <EntitySet Name="CFS_Alibi" EntityType="Self.CFS_Alibi" Schema="ED" store:Type="Tables" />
+          <EntitySet Name="CFS_MurderFacts" EntityType="Self.CFS_MurderFacts" Schema="ED" store:Type="Tables" />
+          <EntitySet Name="CFS_WhoDidIt" EntityType="Self.CFS_WhoDidIt" Schema="ED" store:Type="Tables" />
+          <EntitySet Name="CFS_WhoWasWhere" EntityType="Self.CFS_WhoWasWhere" Schema="ED" store:Type="Tables" />
+          <AssociationSet Name="FK_CFS_Alibi_CFS_MurderFacts" Association="Self.FK_CFS_Alibi_CFS_MurderFacts">
+            <End Role="CFS_MurderFacts" EntitySet="CFS_MurderFacts" />
+            <End Role="CFS_Alibi" EntitySet="CFS_Alibi" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CFS_WhoDidIt_CFS_MurderFacts" Association="Self.FK_CFS_WhoDidIt_CFS_MurderFacts">
+            <End Role="CFS_MurderFacts" EntitySet="CFS_MurderFacts" />
+            <End Role="CFS_WhoDidIt" EntitySet="CFS_WhoDidIt" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CFS_WhoWasWhere_CFS_MurderFacts" Association="Self.FK_CFS_WhoWasWhere_CFS_MurderFacts">
+            <End Role="CFS_MurderFacts" EntitySet="CFS_MurderFacts" />
+            <End Role="CFS_WhoWasWhere" EntitySet="CFS_WhoWasWhere" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="CaseFactSheetModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="CFS_Alibi">
+          <Key>
+            <PropertyRef Name="GameId" />
+          </Key>
+          <Property Name="GameId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="LennyLittle" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="AlFarook" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="PepePerez" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="TonyRacheti" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="MickeyOMalley" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="MaxFineflugle" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="RippRapp" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="BusterBailey" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="RockyRoll" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="LingTong" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="IvyLittle" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="LucyTumble" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="PiperPerez" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="DinaRacheti" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="EileenStellar" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="JoanFineflugle" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="RosePettle" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="DorisDill" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="CandyRoll" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="SingWong" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="CFS_MurderFacts" Relationship="Self.FK_CFS_Alibi_CFS_MurderFacts" FromRole="CFS_Alibi" ToRole="CFS_MurderFacts" />
+        </EntityType>
+        <EntityType Name="CFS_MurderFacts">
+          <Key>
+            <PropertyRef Name="GameId" />
+          </Key>
+          <Property Name="GameId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="VictimId" Type="Int32" />
+          <Property Name="VictimFName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="VictimLName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="VictimPlace" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="MurdererSex" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="MurdererLocationId" Type="Int32" />
+          <Property Name="MurdererAreaId" Type="Int32" />
+          <Property Name="MurdererWeapon38" Type="Int32" />
+          <Property Name="MurdererWeapon45" Type="Int32" />
+          <Property Name="MurdererFingerPrints38Odd" Type="Int32" />
+          <Property Name="MurdererFingerPrints38Even" Type="Int32" />
+          <Property Name="MurdererFingerPrints45Odd" Type="Int32" />
+          <Property Name="MurdererFingerPrints45Even" Type="Int32" />
+          <NavigationProperty Name="CFS_Alibi" Relationship="Self.FK_CFS_Alibi_CFS_MurderFacts" FromRole="CFS_MurderFacts" ToRole="CFS_Alibi" />
+          <NavigationProperty Name="CFS_WhoDidIt" Relationship="Self.FK_CFS_WhoDidIt_CFS_MurderFacts" FromRole="CFS_MurderFacts" ToRole="CFS_WhoDidIt" />
+          <NavigationProperty Name="CFS_WhoWasWhere" Relationship="Self.FK_CFS_WhoWasWhere_CFS_MurderFacts" FromRole="CFS_MurderFacts" ToRole="CFS_WhoWasWhere" />
+        </EntityType>
+        <EntityType Name="CFS_WhoDidIt">
+          <Key>
+            <PropertyRef Name="GameId" />
+          </Key>
+          <Property Name="GameId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="WhoDidIt" Type="Int32" />
+          <NavigationProperty Name="CFS_MurderFacts" Relationship="Self.FK_CFS_WhoDidIt_CFS_MurderFacts" FromRole="CFS_WhoDidIt" ToRole="CFS_MurderFacts" />
+        </EntityType>
+        <EntityType Name="CFS_WhoWasWhere">
+          <Key>
+            <PropertyRef Name="GameId" />
+          </Key>
+          <Property Name="GameId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ArtShowMaleIdOdd" Type="Int32" />
+          <Property Name="ArtShowMaleIdEven" Type="Int32" />
+          <Property Name="ArtShowFemaleIdOdd" Type="Int32" />
+          <Property Name="ArtShowFemaleIdEven" Type="Int32" />
+          <Property Name="BoxAtTheaterMaleIdOdd" Type="Int32" />
+          <Property Name="BoxAtTheaterMaleIdEven" Type="Int32" />
+          <Property Name="BoxAtTheaterFemaleIdOdd" Type="Int32" />
+          <Property Name="BoxAtTheaterFemaleIdEven" Type="Int32" />
+          <Property Name="CardPartyMaleIdOdd" Type="Int32" />
+          <Property Name="CardPartyMaleIdEven" Type="Int32" />
+          <Property Name="CardPartyFemaleIdOdd" Type="Int32" />
+          <Property Name="CardPartyFemaleIdEven" Type="Int32" />
+          <Property Name="DocksMaleIdOdd" Type="Int32" />
+          <Property Name="DocksMaleIdEven" Type="Int32" />
+          <Property Name="DocksFemaleIdOdd" Type="Int32" />
+          <Property Name="DocksFemaleIdEven" Type="Int32" />
+          <Property Name="EmbassyMaleIdOdd" Type="Int32" />
+          <Property Name="EmbassyMaleIdEven" Type="Int32" />
+          <Property Name="EmbassyFemaleIdOdd" Type="Int32" />
+          <Property Name="EmbassyFemaleIdEven" Type="Int32" />
+          <Property Name="FactoryMaleIdOdd" Type="Int32" />
+          <Property Name="FactoryMaleIdEven" Type="Int32" />
+          <Property Name="FactoryFemaleIdOdd" Type="Int32" />
+          <Property Name="FactoryFemaleIdEven" Type="Int32" />
+          <Property Name="ArtShowLocationId" Type="Int32" />
+          <Property Name="ArtShowAreaId" Type="Int32" />
+          <Property Name="BoxAtTheaterLocationId" Type="Int32" />
+          <Property Name="BoxAtTheaterAreaId" Type="Int32" />
+          <Property Name="CardPartyLocationId" Type="Int32" />
+          <Property Name="CardPartyAreaId" Type="Int32" />
+          <Property Name="DocksLocationId" Type="Int32" />
+          <Property Name="DocksAreaId" Type="Int32" />
+          <Property Name="EmbassyLocationId" Type="Int32" />
+          <Property Name="EmbassyAreaId" Type="Int32" />
+          <Property Name="FactoryLocationId" Type="Int32" />
+          <Property Name="FactoryAreaId" Type="Int32" />
+          <Property Name="ArtShowWeaponUsedId" Type="Int32" />
+          <Property Name="BoxAtTheaterWeaponUsedId" Type="Int32" />
+          <Property Name="CardPartyWeaponUsedId" Type="Int32" />
+          <Property Name="DocksWeaponUsedId" Type="Int32" />
+          <Property Name="EmbassyWeaponUsedId" Type="Int32" />
+          <Property Name="FactoryWeaponUsedId" Type="Int32" />
+          <NavigationProperty Name="CFS_MurderFacts" Relationship="Self.FK_CFS_WhoWasWhere_CFS_MurderFacts" FromRole="CFS_WhoWasWhere" ToRole="CFS_MurderFacts" />
+        </EntityType>
+        <Association Name="FK_CFS_Alibi_CFS_MurderFacts">
+          <End Role="CFS_MurderFacts" Type="Self.CFS_MurderFacts" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="CFS_Alibi" Type="Self.CFS_Alibi" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="CFS_MurderFacts">
+              <PropertyRef Name="GameId" />
+            </Principal>
+            <Dependent Role="CFS_Alibi">
+              <PropertyRef Name="GameId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CFS_WhoDidIt_CFS_MurderFacts">
+          <End Role="CFS_MurderFacts" Type="Self.CFS_MurderFacts" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="CFS_WhoDidIt" Type="Self.CFS_WhoDidIt" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="CFS_MurderFacts">
+              <PropertyRef Name="GameId" />
+            </Principal>
+            <Dependent Role="CFS_WhoDidIt">
+              <PropertyRef Name="GameId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CFS_WhoWasWhere_CFS_MurderFacts">
+          <End Role="CFS_MurderFacts" Type="Self.CFS_MurderFacts" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="CFS_WhoWasWhere" Type="Self.CFS_WhoWasWhere" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="CFS_MurderFacts">
+              <PropertyRef Name="GameId" />
+            </Principal>
+            <Dependent Role="CFS_WhoWasWhere">
+              <PropertyRef Name="GameId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="CaseFactSheetEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="CFS_Alibi" EntityType="Self.CFS_Alibi" />
+          <EntitySet Name="CFS_MurderFacts" EntityType="Self.CFS_MurderFacts" />
+          <EntitySet Name="CFS_WhoDidIt" EntityType="Self.CFS_WhoDidIt" />
+          <EntitySet Name="CFS_WhoWasWhere" EntityType="Self.CFS_WhoWasWhere" />
+          <AssociationSet Name="FK_CFS_Alibi_CFS_MurderFacts" Association="Self.FK_CFS_Alibi_CFS_MurderFacts">
+            <End Role="CFS_MurderFacts" EntitySet="CFS_MurderFacts" />
+            <End Role="CFS_Alibi" EntitySet="CFS_Alibi" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CFS_WhoDidIt_CFS_MurderFacts" Association="Self.FK_CFS_WhoDidIt_CFS_MurderFacts">
+            <End Role="CFS_MurderFacts" EntitySet="CFS_MurderFacts" />
+            <End Role="CFS_WhoDidIt" EntitySet="CFS_WhoDidIt" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CFS_WhoWasWhere_CFS_MurderFacts" Association="Self.FK_CFS_WhoWasWhere_CFS_MurderFacts">
+            <End Role="CFS_MurderFacts" EntitySet="CFS_MurderFacts" />
+            <End Role="CFS_WhoWasWhere" EntitySet="CFS_WhoWasWhere" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="CaseFactSheetModelStoreContainer" CdmEntityContainer="CaseFactSheetEntities">
+          <EntitySetMapping Name="CFS_Alibi">
+            <EntityTypeMapping TypeName="CaseFactSheetModel.CFS_Alibi">
+              <MappingFragment StoreEntitySet="CFS_Alibi">
+                <ScalarProperty Name="GameId" ColumnName="GameId" />
+                <ScalarProperty Name="LennyLittle" ColumnName="LennyLittle" />
+                <ScalarProperty Name="AlFarook" ColumnName="AlFarook" />
+                <ScalarProperty Name="PepePerez" ColumnName="PepePerez" />
+                <ScalarProperty Name="TonyRacheti" ColumnName="TonyRacheti" />
+                <ScalarProperty Name="MickeyOMalley" ColumnName="MickeyOMalley" />
+                <ScalarProperty Name="MaxFineflugle" ColumnName="MaxFineflugle" />
+                <ScalarProperty Name="RippRapp" ColumnName="RippRapp" />
+                <ScalarProperty Name="BusterBailey" ColumnName="BusterBailey" />
+                <ScalarProperty Name="RockyRoll" ColumnName="RockyRoll" />
+                <ScalarProperty Name="LingTong" ColumnName="LingTong" />
+                <ScalarProperty Name="IvyLittle" ColumnName="IvyLittle" />
+                <ScalarProperty Name="LucyTumble" ColumnName="LucyTumble" />
+                <ScalarProperty Name="PiperPerez" ColumnName="PiperPerez" />
+                <ScalarProperty Name="DinaRacheti" ColumnName="DinaRacheti" />
+                <ScalarProperty Name="EileenStellar" ColumnName="EileenStellar" />
+                <ScalarProperty Name="JoanFineflugle" ColumnName="JoanFineflugle" />
+                <ScalarProperty Name="RosePettle" ColumnName="RosePettle" />
+                <ScalarProperty Name="DorisDill" ColumnName="DorisDill" />
+                <ScalarProperty Name="CandyRoll" ColumnName="CandyRoll" />
+                <ScalarProperty Name="SingWong" ColumnName="SingWong" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CFS_MurderFacts">
+            <EntityTypeMapping TypeName="CaseFactSheetModel.CFS_MurderFacts">
+              <MappingFragment StoreEntitySet="CFS_MurderFacts">
+                <ScalarProperty Name="GameId" ColumnName="GameId" />
+                <ScalarProperty Name="VictimId" ColumnName="VictimId" />
+                <ScalarProperty Name="VictimFName" ColumnName="VictimFName" />
+                <ScalarProperty Name="VictimLName" ColumnName="VictimLName" />
+                <ScalarProperty Name="VictimPlace" ColumnName="VictimPlace" />
+                <ScalarProperty Name="MurdererSex" ColumnName="MurdererSex" />
+                <ScalarProperty Name="MurdererLocationId" ColumnName="MurdererLocationId" />
+                <ScalarProperty Name="MurdererAreaId" ColumnName="MurdererAreaId" />
+                <ScalarProperty Name="MurdererWeapon38" ColumnName="MurdererWeapon38" />
+                <ScalarProperty Name="MurdererWeapon45" ColumnName="MurdererWeapon45" />
+                <ScalarProperty Name="MurdererFingerPrints38Odd" ColumnName="MurdererFingerPrints38Odd" />
+                <ScalarProperty Name="MurdererFingerPrints38Even" ColumnName="MurdererFingerPrints38Even" />
+                <ScalarProperty Name="MurdererFingerPrints45Odd" ColumnName="MurdererFingerPrints45Odd" />
+                <ScalarProperty Name="MurdererFingerPrints45Even" ColumnName="MurdererFingerPrints45Even" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CFS_WhoDidIt">
+            <EntityTypeMapping TypeName="CaseFactSheetModel.CFS_WhoDidIt">
+              <MappingFragment StoreEntitySet="CFS_WhoDidIt">
+                <ScalarProperty Name="GameId" ColumnName="GameId" />
+                <ScalarProperty Name="WhoDidIt" ColumnName="WhoDidIt" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CFS_WhoWasWhere">
+            <EntityTypeMapping TypeName="CaseFactSheetModel.CFS_WhoWasWhere">
+              <MappingFragment StoreEntitySet="CFS_WhoWasWhere">
+                <ScalarProperty Name="GameId" ColumnName="GameId" />
+                <ScalarProperty Name="ArtShowMaleIdOdd" ColumnName="ArtShowMaleIdOdd" />
+                <ScalarProperty Name="ArtShowMaleIdEven" ColumnName="ArtShowMaleIdEven" />
+                <ScalarProperty Name="ArtShowFemaleIdOdd" ColumnName="ArtShowFemaleIdOdd" />
+                <ScalarProperty Name="ArtShowFemaleIdEven" ColumnName="ArtShowFemaleIdEven" />
+                <ScalarProperty Name="BoxAtTheaterMaleIdOdd" ColumnName="BoxAtTheaterMaleIdOdd" />
+                <ScalarProperty Name="BoxAtTheaterMaleIdEven" ColumnName="BoxAtTheaterMaleIdEven" />
+                <ScalarProperty Name="BoxAtTheaterFemaleIdOdd" ColumnName="BoxAtTheaterFemaleIdOdd" />
+                <ScalarProperty Name="BoxAtTheaterFemaleIdEven" ColumnName="BoxAtTheaterFemaleIdEven" />
+                <ScalarProperty Name="CardPartyMaleIdOdd" ColumnName="CardPartyMaleIdOdd" />
+                <ScalarProperty Name="CardPartyMaleIdEven" ColumnName="CardPartyMaleIdEven" />
+                <ScalarProperty Name="CardPartyFemaleIdOdd" ColumnName="CardPartyFemaleIdOdd" />
+                <ScalarProperty Name="CardPartyFemaleIdEven" ColumnName="CardPartyFemaleIdEven" />
+                <ScalarProperty Name="DocksMaleIdOdd" ColumnName="DocksMaleIdOdd" />
+                <ScalarProperty Name="DocksMaleIdEven" ColumnName="DocksMaleIdEven" />
+                <ScalarProperty Name="DocksFemaleIdOdd" ColumnName="DocksFemaleIdOdd" />
+                <ScalarProperty Name="DocksFemaleIdEven" ColumnName="DocksFemaleIdEven" />
+                <ScalarProperty Name="EmbassyMaleIdOdd" ColumnName="EmbassyMaleIdOdd" />
+                <ScalarProperty Name="EmbassyMaleIdEven" ColumnName="EmbassyMaleIdEven" />
+                <ScalarProperty Name="EmbassyFemaleIdOdd" ColumnName="EmbassyFemaleIdOdd" />
+                <ScalarProperty Name="EmbassyFemaleIdEven" ColumnName="EmbassyFemaleIdEven" />
+                <ScalarProperty Name="FactoryMaleIdOdd" ColumnName="FactoryMaleIdOdd" />
+                <ScalarProperty Name="FactoryMaleIdEven" ColumnName="FactoryMaleIdEven" />
+                <ScalarProperty Name="FactoryFemaleIdOdd" ColumnName="FactoryFemaleIdOdd" />
+                <ScalarProperty Name="FactoryFemaleIdEven" ColumnName="FactoryFemaleIdEven" />
+                <ScalarProperty Name="ArtShowLocationId" ColumnName="ArtShowLocationId" />
+                <ScalarProperty Name="ArtShowAreaId" ColumnName="ArtShowAreaId" />
+                <ScalarProperty Name="BoxAtTheaterLocationId" ColumnName="BoxAtTheaterLocationId" />
+                <ScalarProperty Name="BoxAtTheaterAreaId" ColumnName="BoxAtTheaterAreaId" />
+                <ScalarProperty Name="CardPartyLocationId" ColumnName="CardPartyLocationId" />
+                <ScalarProperty Name="CardPartyAreaId" ColumnName="CardPartyAreaId" />
+                <ScalarProperty Name="DocksLocationId" ColumnName="DocksLocationId" />
+                <ScalarProperty Name="DocksAreaId" ColumnName="DocksAreaId" />
+                <ScalarProperty Name="EmbassyLocationId" ColumnName="EmbassyLocationId" />
+                <ScalarProperty Name="EmbassyAreaId" ColumnName="EmbassyAreaId" />
+                <ScalarProperty Name="FactoryLocationId" ColumnName="FactoryLocationId" />
+                <ScalarProperty Name="FactoryAreaId" ColumnName="FactoryAreaId" />
+                <ScalarProperty Name="ArtShowWeaponUsedId" ColumnName="ArtShowWeaponUsedId" />
+                <ScalarProperty Name="BoxAtTheaterWeaponUsedId" ColumnName="BoxAtTheaterWeaponUsedId" />
+                <ScalarProperty Name="CardPartyWeaponUsedId" ColumnName="CardPartyWeaponUsedId" />
+                <ScalarProperty Name="DocksWeaponUsedId" ColumnName="DocksWeaponUsedId" />
+                <ScalarProperty Name="EmbassyWeaponUsedId" ColumnName="EmbassyWeaponUsedId" />
+                <ScalarProperty Name="FactoryWeaponUsedId" ColumnName="FactoryWeaponUsedId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
